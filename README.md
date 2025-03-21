@@ -303,4 +303,4 @@ This workflow was successfully executed using [the University of Minnesota's Min
 
 ## Acknowledgments
 
-This project was funded by the National Oceanic and Atmospheric Administration (NA19NOS4190058). Both [Microsoft's Copilot](https://copilot.microsoft.com/) and [OpenAI's ChatGPT](https://chatgpt.com/) were used for generic code advice during this project.
+This work is/was sponsored by the National Estuarine Research Reserve System Science Collaborative, which supports collaborative research that addresses coastal management problems important to the reserves. The Science Collaborative is funded by the National Oceanic and Atmospheric Administration and managed by the University of Michigan Water Center (NA19NOS4190058). The project team is also grateful for the computational infrastructure and resources and provided by the Minnesota Supercomputing Institute. The cBoth [Microsoft's Copilot](https://copilot.microsoft.com/) and [OpenAI's ChatGPT](https://chatgpt.com/) were used for generic code advice during this project.
