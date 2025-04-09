@@ -2,7 +2,7 @@
 
 ## Project objective
 
-The objective of this project is to develop tools and methods using open-source geospatial technologies for land cover mapping of the St. Louis River Estuary, near the border between Wisconsin (WI) and Minnesota (MN) in the Duluth-Superior metro area. The main data product from this project is a classified land cover map of the area of interest produced by segmentation of high-resolution aerial imagery with a deep learning approach (U-Net).
+The objective of this project is to develop tools and methods using open-source geospatial technologies for land cover mapping of the St. Louis River Estuary, along the border between Wisconsin (WI) and Minnesota (MN) in the Duluth-Superior metro area. The main data product from this project is a classified land cover map of the area of interest produced by segmentation of high-resolution aerial imagery with a deep learning approach (U-Net).
 
 Target land cover classes:
 
