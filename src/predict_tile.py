@@ -368,7 +368,7 @@ def _smooth_patches(patches, window_size, smooth = True, **kwargs):
     else:
         return patches
 
-def predict_patches(patches, model, batch_size=32, loop=True):
+def predict_patches(patches, model, batch_size=64, loop=False):
     '''
     Predict patches using the U-Net model.
 
@@ -413,7 +413,7 @@ def predict_patches(patches, model, batch_size=32, loop=True):
     #       and produces garbage output. that is why the predictions
     #       are done above in a for loop. :/
     else:
-        return model.predict(patches, batch_size = batch_size)
+        return model.predict(patches)
 
 def segment_tile(model, tile, window_size, subdivisions, nb_classes, smooth= True, mirror = True, tukey = False):
     '''
@@ -446,7 +446,7 @@ def segment_tile(model, tile, window_size, subdivisions, nb_classes, smooth= Tru
     img_predict : numpy array
         The segmented image, with smoothed predictions.
     '''
-    _predict_patches = partial(predict_patches, model=model, batch_size = 256, loop = True)
+    _predict_patches = partial(predict_patches, model=model, batch_size = 256, loop = False)
 
     img_pad = _pad_img(tile, window_size, subdivisions)
     if mirror:

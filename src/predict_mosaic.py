@@ -25,7 +25,7 @@ def main():
     '''
     parser = predict_mosaic_parser()
     args = parser.parse_args()
-    print(f'image_path: {args.image_path}')
+    print(f'mosaic_path: {args.mosaic_path}')
 
     model = load_model_file(args.model_path, compile = False)
 
@@ -38,7 +38,7 @@ def main():
 
     print(f'tile dims: win_height: {win_height},  win_width: {win_width}')
 
-    meta = raster_metadata(path = Path(args.image_path))
+    meta = raster_metadata(path = Path(args.mosaic_path))
     outMeta = meta.copy()
     outMeta.update({'dtype': rasterio.int16, 'count' : n_classes, 'nodata': -9999, 'compress':'lzw'})
     print(f'outMeta is: {outMeta}')
@@ -54,7 +54,7 @@ def main():
         for win in windows:
             print(f'working on window(row, col):  {win.row_off}, {win.col_off}')
             segment, img = mosaic_window(
-                path = args.image_path,
+                path = args.mosaic_path,
                 window = win
             )
 
